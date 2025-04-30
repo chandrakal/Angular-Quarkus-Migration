@@ -5,11 +5,11 @@
     <div class="form-grid">
       <label for="firstName">First Name:</label>
       <input type="text" [(ngModel)]="firstName" name="firstName" required #firstName="ngModel">
-      <div *ngIf="firstName.invalid && firstName.touched">First name is required.</div>
+      <div *ngIf="firstName.invalid && firstName.touched">First Name is required.</div>
 
       <label for="lastName">Last Name:</label>
       <input type="text" [(ngModel)]="lastName" name="lastName" required #lastName="ngModel">
-      <div *ngIf="lastName.invalid && lastName.touched">Last name is required.</div>
+      <div *ngIf="lastName.invalid && lastName.touched">Last Name is required.</div>
 
       <label for="age">Age:</label>
       <input type="number" [(ngModel)]="age" name="age" required #age="ngModel">
