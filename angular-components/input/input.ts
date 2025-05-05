@@ -13,6 +13,6 @@ export class UserRegistrationComponent {
   address: string;
 
   onSubmit() {
-    // Your logic here
+    console.log('Form submitted');
   }
 }
