@@ -33,17 +33,13 @@
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-resteasy</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-jsf</artifactId>
+            <artifactId>quarkus-log4j-quarkus</artifactId>
         </dependency>
     </dependencies>
 
     <build>
-        <!-- Specify the Maven Compiler Plugin to use Java 21 -->
         <plugins>
+            <!-- Specify the Maven Compiler Plugin to use Java 21 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -52,6 +48,13 @@
                     <source>21</source> <!-- Java 21 -->
                     <target>21</target>
                 </configuration>
+            </plugin>
+
+            <!-- Ensure Quarkus packaging -->
+            <plugin>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-maven-plugin</artifactId>
+                <version>3.17.2.Final</version>
             </plugin>
         </plugins>
     </build>
