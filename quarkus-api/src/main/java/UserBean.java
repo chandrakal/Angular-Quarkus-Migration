@@ -8,26 +8,12 @@ import java.io.Serializable;
 
 @Named
 @SessionScoped
-public class User {
-
-    private String firstName;
-    private String lastName;
-    private int age;
-    private String address;
+public record UserBean(String firstName, String lastName, int age, String address) implements Serializable {
 
     @Inject
-    private UserService userService;
-
-    public User(String firstName, String lastName, int age, String address) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.address = address;
-    }
+    UserService userService;
 
     public void submit() {
         userService.logUserDetails(this);
     }
 }
-
-record UserService() {} // Empty record for UserService
