@@ -5,29 +5,19 @@
     <div class="form-grid">
       <label for="firstName">First Name:</label>
       <input type="text" [(ngModel)]="firstName" name="firstName" required #firstName="ngModel">
-      <div *ngIf="firstName.invalid && firstName.touched">
-        <div *ngIf="firstName.errors.required">First name is required</div>
-        <div *ngIf="firstName.errors.minlength">First name must be at least 1 character long</div>
-      </div>
+      <div *ngIf="firstName.invalid && firstName.touched">First name is required.</div>
 
       <label for="lastName">Last Name:</label>
       <input type="text" [(ngModel)]="lastName" name="lastName" required #lastName="ngModel">
-      <div *ngIf="lastName.invalid && lastName.touched">
-        <div *ngIf="lastName.errors.required">Last name is required</div>
-        <div *ngIf="lastName.errors.minlength">Last name must be at least 1 character long</div>
-      </div>
+      <div *ngIf="lastName.invalid && lastName.touched">Last name is required.</div>
 
       <label for="age">Age:</label>
       <input type="number" [(ngModel)]="age" name="age" required #age="ngModel">
-      <div *ngIf="age.invalid && age.touched">
-        Age is required
-      </div>
+      <div *ngIf="age.invalid && age.touched">Age is required.</div>
 
       <label for="address">Address:</label>
       <textarea [(ngModel)]="address" name="address" required #address="ngModel"></textarea>
-      <div *ngIf="address.invalid && address.touched">
-        Address is required
-      </div>
+      <div *ngIf="address.invalid && address.touched">Address is required.</div>
     </div>
 
     <button type="submit">Submit</button>
