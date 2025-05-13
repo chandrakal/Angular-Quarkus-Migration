@@ -13,6 +13,6 @@ export class UserRegistrationComponent {
   address: string;
 
   onSubmit() {
-    console.log('Form submitted with values:', this.firstName, this.lastName, this.age, this.address);
+    // Your logic here
   }
 }
