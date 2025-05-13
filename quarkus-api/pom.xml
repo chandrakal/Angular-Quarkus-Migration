@@ -33,8 +33,11 @@
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-log4j-quarkus</artifactId>
-            <version>3.17.2.Final</version>
+            <artifactId>quarkus-resteasy</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-jsf</artifactId>
         </dependency>
     </dependencies>
 
